@@ -6,7 +6,7 @@ import { applyFilter } from "../../redux/Characters/CharactersSlice";
 import SelectInput from "./SelectInput";
 import { selectFilter } from "../../redux/selectors";
 
-const FilterBar = () => {
+const FilterBar = (handleSubmit) => {
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
@@ -28,7 +28,6 @@ const FilterBar = () => {
           letterSpacing: 0.5,
         }}
       />
-      <FilterBtn />
     </form>
   );
 };

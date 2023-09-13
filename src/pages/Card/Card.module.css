@@ -1,0 +1,38 @@
+.card {
+  width: 1220px;
+  height: 571px;
+  border-radius: 9px;
+  background: var(--bg-color);
+  display: flex;
+  flex-wrap: nowrap;
+}
+.cardImage {
+  width: 595px;
+  height: 571px;
+  border-radius: 9px 0px 0px 9px;
+}
+
+.cardTitle {
+  color: var(--light-grey-color);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: calc(29.7 / 27);
+}
+.creatureType {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(26 / 16);
+  text-transform: capitalize;
+}
+.locationType {
+  color: var(--arrows-color);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: calc(26 / 15);
+}
+.location {
+  color: var(--light-grey-color);
+  font-size: 18px;
+  line-height: calc(29.25 / 18);
+}

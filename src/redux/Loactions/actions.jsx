@@ -15,7 +15,7 @@ export const fetchLocations = createAsyncThunk(
           limit: 6,
         },
       });
-      console.log(response.data.results, "locations");
+      // console.log(response.data.results, "locations");
       return response.data.results;
     } catch (err) {
       console.log(err.message);

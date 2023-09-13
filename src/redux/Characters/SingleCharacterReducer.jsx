@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCharacters, fetchSingleCharacter } from "./actions";
+import { fetchSingleCharacter } from "./actions";
 
 const singleCharactersReducer = createSlice({
   name: "character",
   initialState: {
-    data: [],
+    data: null,
     isLoading: false,
     error: null,
     currentPage: 1,
@@ -12,9 +12,9 @@ const singleCharactersReducer = createSlice({
     filter: "",
   },
   reducers: {
-    applyFilter(state, action) {
-      state.filter = action.payload;
-    },
+    // applyFilter(state, action) {
+    //   state.filter = action.payload;
+    // },
   },
   extraReducers: (builder) => {
     builder
@@ -23,8 +23,8 @@ const singleCharactersReducer = createSlice({
         state.error = null;
       })
       .addCase(fetchSingleCharacter.fulfilled, (state, action) => {
-        state.data = [...action.payload];
-        console.log(state.data, "results form slice");
+        state.data = action.payload;
+        console.log(action.payload, "results form single slice");
         state.isLoading = false;
       })
       .addCase(fetchSingleCharacter.rejected, (state, action) => {
@@ -34,4 +34,4 @@ const singleCharactersReducer = createSlice({
   },
 });
 export default singleCharactersReducer.reducer;
-export const { applyFilter } = fetchSingleCharacter.actions;
+// export const { applyFilter } = fetchSingleCharacter.actions;

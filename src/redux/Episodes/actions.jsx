@@ -15,7 +15,7 @@ export const fetchEpisodes = createAsyncThunk(
           limit: 6,
         },
       });
-      console.log(response.data.results, "episodes");
+      // console.log(response.data.results, "episodes");
       return response.data.results;
     } catch (err) {
       console.log(err.message);

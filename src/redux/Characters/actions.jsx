@@ -15,7 +15,7 @@ export const fetchCharacters = createAsyncThunk(
           limit: 6,
         },
       });
-      console.log(response.data.results, "actions");
+
       return response.data.results;
     } catch (err) {
       console.log(err.message);
@@ -30,12 +30,13 @@ export const fetchSingleCharacter = createAsyncThunk(
       const currentPage = thunkAPI.getState().characters.currentPage;
       const response = await axios.get(`/character/${id}`, {
         params: {
+          id,
           page: currentPage,
           limit: 6,
         },
       });
-      console.log(response.data.results, "id");
-      return response.data.results;
+
+      return response.data;
     } catch (err) {
       console.log(err.message);
       return thunkAPI.rejectWithValue(err);

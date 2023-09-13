@@ -5,9 +5,12 @@ import "modern-normalize";
 import "./assets/global.css";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <BrowserRouter basename="incode-rick-and-morty-2">
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
 );

@@ -24,7 +24,6 @@ const charactersReducer = createSlice({
       })
       .addCase(fetchCharacters.fulfilled, (state, action) => {
         state.data = [...action.payload];
-        console.log(state.data, "results form slice");
         state.isLoading = false;
       })
       .addCase(fetchCharacters.rejected, (state, action) => {
