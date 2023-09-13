@@ -1,7 +1,7 @@
 {
   "name": "incode-rick-and-morty",
   "version": "0.1.0",
-  "homepage": "https://julmihelson.github.io/incode-rick-and-morty/",
+  "homepage": "https://julmihelson.github.io/incode-rick-and-morty-2/",
   "public": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
