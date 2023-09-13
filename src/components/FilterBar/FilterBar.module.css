@@ -1,0 +1,26 @@
+.filtreBar {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+.selectInput {
+  font-size: 40px;
+}
+.removeBtn {
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--section-bg);
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  height: 38px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  background: var(--light-grey-color);
+  margin-right: 161px;
+}

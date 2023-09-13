@@ -1,0 +1,10 @@
+.gallerySection {
+  padding: 24px 106px 11.4px 107px;
+  background-color: var(--section-bg);
+}
+
+.galleryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}

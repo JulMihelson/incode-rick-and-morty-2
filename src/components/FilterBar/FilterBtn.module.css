@@ -1,0 +1,17 @@
+.filterBtn {
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--section-bg);
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  height: 38px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  background: var(--light-grey-color);
+}

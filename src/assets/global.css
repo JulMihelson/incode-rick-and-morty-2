@@ -1,0 +1,72 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+:root {
+  --text-color: #202329;
+  --section-bg: #272b33;
+  --bg-color: #3c3e44;
+  --arrows-color: #9e9e9e;
+  --light-grey-color: #f5f5f5;
+  --transition-duration: 250ms;
+  --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--arrows-color);
+}
+
+/* .tempNav {
+  display: flex;
+  gap: 8px;
+}
+
+
+
+a {
+  color: var(--white);
+  text-decoration: none;
+} */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(239, 237, 232, 0.1);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ef8964;
+  border-radius: 12px;
+} */
