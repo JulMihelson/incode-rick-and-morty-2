@@ -7,7 +7,7 @@ import { selectCharacter } from "../../redux/selectors";
 
 const Card = () => {
   const { id } = useParams();
-  console.log(id, "wtf");
+  // console.log(id, "wtf");
 
   const dispatch = useDispatch();
 
@@ -17,22 +17,31 @@ const Card = () => {
 
   const character = useSelector(selectCharacter);
 
-  const { image, name, status, species, location, origin } = character;
-  console.log(character, "whole character");
+  // const { image, name, status, species, location, origin } = character;
+  // console.log(character, "whole character destr");
+  if (!character) {
+    return;
+  }
   return (
-    <div className={css.card}>
-      {/* <img className={css.cardImage} src={image} alt={name} />
-      <div className={css.cardInfo}>
-        <h2 className={css.cardTitle}>{name}</h2>
-        <p className={css.creatureType}>
-          {status} - {species}
-        </p>
-        <p className={css.locationType}>Last known location:</p>
-        <p className={css.location}>{location.name}</p>
-        <p className={css.locationType}>First seen in:</p>
-        <p className={css.location}>{origin.name}</p>
-      </div> */}
-    </div>
+    character && (
+      <div className={css.card}>
+        <img
+          className={css.cardImage}
+          src={character.image}
+          alt={character.name}
+        />
+        <div className={css.cardInfo}>
+          <h2 className={css.cardTitle}>{character.name}</h2>
+          <p className={css.creatureType}>
+            {character.status} - {character.species}
+          </p>
+          <p className={css.locationType}>Last known location:</p>
+          <p className={css.location}>{character.location.name}</p>
+          <p className={css.locationType}>First seen in:</p>
+          <p className={css.location}>{origin.name}</p>
+        </div>
+      </div>
+    )
   );
 };
 

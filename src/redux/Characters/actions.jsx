@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL = "https://rickandmortyapi.com/api";
@@ -35,7 +34,7 @@ export const fetchSingleCharacter = createAsyncThunk(
           limit: 6,
         },
       });
-
+      console.log(response.data, "response data");
       return response.data;
     } catch (err) {
       console.log(err.message);
