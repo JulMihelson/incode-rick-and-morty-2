@@ -26,53 +26,9 @@ const PaginationBar = () => {
       onChange={handlePageChange}
       pageSize={itemsPerPage}
       total={totalPageCount}
+      showSizeChanger={false}
     />
   );
 };
 
 export default PaginationBar;
-
-// import React, { useEffect, useState } from "react";
-// import { Pagination } from "antd";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchCharacters } from "../../redux/Characters/actions";
-// import {
-//   selectCharacters,
-//   selectCurrentPage,
-//   selectInfoPages,
-// } from "../../redux/selectors";
-// import { useParams } from "react-router-dom";
-// import { onPageChange } from "../../redux/Characters/CharactersSlice";
-
-// const PaginationBar = () => {
-//   const dispatch = useDispatch();
-//   const characters = useSelector(selectCharacters);
-//   const respLength = useSelector(selectInfoPages);
-//   const [currentPage, setCurrentPage] = useState();
-
-//   // const currentPage = useSelector(selectCurrentPage);
-
-//   console.log(respLength, "length of pages");
-//   const page = useParams();
-
-//   useEffect(
-//     (currentPage) => {
-//       dispatch(fetchCharacters());
-//     },
-//     [dispatch, currentPage]
-//   );
-
-//   const handleChange = () => {
-//     dispatch(setCurrentPage(currentPage));
-//   };
-
-//   return (
-//     <Pagination
-//       current={}
-//       onChange={handleChange}
-//       pageSize={}
-//       total={}
-//     />
-//   );
-// };
-// export default PaginationBar;

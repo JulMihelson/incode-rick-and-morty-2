@@ -11,11 +11,7 @@ const singleCharactersReducer = createSlice({
     limit: 6,
     filter: "",
   },
-  reducers: {
-    // applyFilter(state, action) {
-    //   state.filter = action.payload;
-    // },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchSingleCharacter.pending, (state) => {
@@ -34,4 +30,3 @@ const singleCharactersReducer = createSlice({
   },
 });
 export default singleCharactersReducer.reducer;
-// export const { applyFilter } = fetchSingleCharacter.actions;

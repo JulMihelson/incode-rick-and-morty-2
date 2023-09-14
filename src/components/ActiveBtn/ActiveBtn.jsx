@@ -5,7 +5,6 @@ import {
 } from "@ant-design/icons";
 import React from "react";
 import { FloatButton } from "antd";
-// import sprite from "../../assets/sprite.svg";
 
 const ActiveBtn = () => (
   <>

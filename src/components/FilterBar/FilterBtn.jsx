@@ -4,7 +4,6 @@ import axios from "axios";
 const FilterBtn = ({ selectedFilters, onFilterSubmit }) => {
   const handleSubmit = async () => {
     try {
-      // Використовуйте функцію onFilterSubmit для виклику фільтрації з вибраними параметрами
       onFilterSubmit(selectedFilters);
     } catch (error) {
       console.error("Error fetching filtered data:", error);
