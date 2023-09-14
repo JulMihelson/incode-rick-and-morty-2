@@ -4,6 +4,7 @@ import css from "./GalleryItem.module.css";
 const GalleryItem = (character) => {
   console.log({ character }, "galleryItem");
   const path = `/character/${character.id}`;
+  console.log(character.id, "char id");
   return (
     <Link id={character.id} character={character} to={path}>
       <li className={css.card}>

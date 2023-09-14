@@ -17,6 +17,8 @@
   z-index: 2;
 }
 .socialNetworks {
+  width: 18px;
+  height: 18px;
   fill: var(--arrows-color);
 }
 .networksList {

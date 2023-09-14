@@ -8,10 +8,14 @@ const charactersReducer = createSlice({
     isLoading: false,
     error: null,
     currentPage: 1,
+    respLength: null,
     limit: 6,
     filter: "",
   },
   reducers: {
+    onPageChange(state, action) {
+      state.currentPage = action.payload;
+    },
     applyFilter(state, action) {
       state.filter = action.payload;
     },
@@ -23,8 +27,9 @@ const charactersReducer = createSlice({
         state.error = null;
       })
       .addCase(fetchCharacters.fulfilled, (state, action) => {
-        state.data = [...action.payload];
+        state.data = [...action.payload.results];
         state.isLoading = false;
+        state.respLength = action.payload.info.count;
       })
       .addCase(fetchCharacters.rejected, (state, action) => {
         state.isLoading = false;
@@ -33,4 +38,4 @@ const charactersReducer = createSlice({
   },
 });
 export default charactersReducer.reducer;
-export const { applyFilter } = charactersReducer.actions;
+export const { onPageChange, applyFilter } = charactersReducer.actions;

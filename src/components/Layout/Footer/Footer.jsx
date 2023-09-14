@@ -1,5 +1,9 @@
 import css from "./Footer.module.css";
-import symbolDefs from "../../../assets/symbol-defs.svg";
+import {
+  GithubOutlined,
+  HeartFilled,
+  TwitterOutlined,
+} from "@ant-design/icons";
 
 const Footer = () => {
   return (
@@ -12,19 +16,22 @@ const Footer = () => {
       </div>
       <ul className={css.networksList}>
         <li>
-          <svg className={css.socialNetworks} width="18" height="18">
-            <use href={symbolDefs + "#github-icon"}></use>
-          </svg>
+          <GithubOutlined style={{ fontSize: "20px" }} />
+          {/* <svg className={css.socialNetworks} width="18" height="18">
+            <use href={sprite + "#github-icon"}></use>
+          </svg> */}
         </li>
         <li>
-          <svg width="18" height="18">
-            <use href={symbolDefs + "#twitter-icon"}></use>
-          </svg>
+          <TwitterOutlined style={{ fontSize: "20px" }} />
+          {/* <svg width="18" height="18">
+            <use href={sprite + "#twitter-icon"}></use>
+          </svg> */}
         </li>
         <li>
-          <svg width="18" height="18">
-            <use href={symbolDefs + "#heart-icon"}></use>
-          </svg>
+          <HeartFilled style={{ fontSize: "20px" }} />
+          {/* <svg width="18" height="18">
+            <use href={sprite + "#heart-icon"}></use>
+          </svg> */}
         </li>
       </ul>
       <p>2023</p>
