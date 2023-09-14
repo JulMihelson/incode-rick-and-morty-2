@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// Замініть "yourReducer" на шлях до вашого редуктора та дій
 import { Pagination } from "antd";
 import { onPageChange } from "../../redux/Characters/CharactersSlice";
 import { fetchCharacters } from "../../redux/Characters/actions";
-// import "antd/dist/antd.css"; // Підключіть стилі Ant Design
 
 const PaginationBar = () => {
   const dispatch = useDispatch();
@@ -19,7 +17,7 @@ const PaginationBar = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchCharacters()); // Виконайте запит на дані при зміні сторінки
+    dispatch(fetchCharacters());
   }, [currentPage, dispatch]);
 
   return (
